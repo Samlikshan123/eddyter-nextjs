@@ -1,3 +1,4 @@
+'use client';
 
 import {
   ConfigurableEditorWithAuth,
@@ -6,7 +7,7 @@ import {
 } from 'eddyter';
 import 'eddyter/style.css';
 
-export default function Eddyter(onChange) {
+export default function Eddyter() {
   const apiKey = process.env.NEXT_PUBLIC_API_KEY!;
 
 
@@ -16,7 +17,6 @@ export default function Eddyter(onChange) {
     <EditorProvider defaultFontFamilies={defaultEditorConfig.defaultFontFamilies}>
       <ConfigurableEditorWithAuth
         apiKey={apiKey}
-        onChange={onChange}
         initialContent={"asdfjl;asdjf"}
       />
     </EditorProvider>
